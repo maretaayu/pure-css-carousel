@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap");
+:root {
+  --theme-primary: #191932;
+  --theme-text: #fff;
+}
+
+body {
+  background-color: var(--theme-primary);
+  color: var(--theme-text);
+  font-family: "Sora", sans-serif;
+}
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.profile {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile h2 {
+  margin-top: 0.75rem;
+}
+.profile-img img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+}
+
+.carousel {
+  overflow: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.content {
+  display: none;
+}
+
+.item {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  width: 200px;
+  position: relative;
+}
+
+.item img:hover + .content {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+.item img {
+  width: inherit;
+}
+
+button {
+  margin-top: 0.75rem;
+  border-radius: 25px;
+  color: var(--theme-text);
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  background: linear-gradient(218deg, #1a74fc 0%, #a35aff 100%);
+}
